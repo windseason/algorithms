@@ -8,27 +8,7 @@
 
 #include <stdio.h>
 #include <assert.h>
-
-typedef struct listNode {
-    int value;
-    struct listNode *next;
-} ListNode;
-
-void printList(const ListNode *head) {
-    if(NULL == head) {
-        printf("[empty list]");
-        return;
-    }
-
-    printf("[");
-    do {
-        printf("%d", head->value);
-        if(head->next) {
-            printf(",");
-        }
-    } while((head = head->next));
-    printf("]\n");
-}
+#include "common.h"
 
 void reverseList(ListNode **ppHead) {
     ListNode *newHead = NULL, *next = NULL;
@@ -121,5 +101,5 @@ int main() {
 
     ListNode *result = reverseListBetween(newHead, 0, 3);
     printList(result);
-    return 1;
+    return 0;
 }
