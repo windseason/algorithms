@@ -8,7 +8,7 @@
 
 #include <stdio.h>
 #include <assert.h>
-#include "common.h"
+#include "../common.h"
 
 void reverseList(ListNode **ppHead) {
     ListNode *newHead = NULL, *next = NULL;

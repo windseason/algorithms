@@ -6,7 +6,7 @@
  * @desc find intersection node between two lists.
 */
 #include <stdio.h>
-#include "common.h"
+#include "../common.h"
 
 ListNode * findIntersectionNodeBetween(ListNode *a, ListNode *b) {
     int lenA = 0, lenB = 0; //lenA and lenB represent the length of the list a and b respectively.

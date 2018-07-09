@@ -8,7 +8,7 @@
 
 #include <stdio.h>
 #include <assert.h>
-#include "common.h"
+#include "../common.h"
 
 ListNode * mergeSortedLists(ListNode *a, ListNode *b) {
     ListNode newHead;
