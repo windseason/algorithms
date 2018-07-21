@@ -84,6 +84,9 @@ int partition(int *a, const int low, const int high) {
     return i;
 }
 
+/**
+ * Find the kth largest number.
+ */
 int findKthMax(const int *a, const int n, const int kth) {
     int *tmp = (int *)malloc(sizeof(int) * n);
 
@@ -99,12 +102,20 @@ int findKthMax(const int *a, const int n, const int kth) {
         //printf("\n");
 
         //printf("k is %d\n", k);
+
+        //partition will split the array(between low and high)
+        //to two parts that numbers in one part are greater than or equal to 
+        //the value at mid and numbers in the other part are smaller than or 
+        //equal to the value at mid.
         int mid = partition(tmp, low, high);
         //printf("mid is %d\n", mid);
         //printInts(tmp, n);
 
+        //calculate the index where the kth largest number should be.
         int p = high + 1 - k;
         //printf("p is %d\n", p);
+
+        //if mid is the index of the kth larget number, then found.
         if(mid == p) {
             result = tmp[mid];
             break;
